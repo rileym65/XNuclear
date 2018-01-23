@@ -1,0 +1,116 @@
+Welcome to Nukeplant for X
+
+This is really only a pre-release, so do not expect too much!
+
+This document will explain how to start up and control this nuclear power plant.
+
+Compilation:
+This package requires libRcs (separate package) to compile.  There is nothing
+out of the ordinary with the code, so it should compile on just about anything.
+
+
+When you start the program, the plant will be in a state of Cold-Shutdown.  Your
+first task will be to bring the plant up to Hot-Standby.  Follow these steps:
+
+1. Start the Reactor Coolant Pumps (RCP1,RCP2,RCP3), The pumps are in operation
+   When the light next to the buttons appears green.
+
+2. Using the Feed Valves (FV1,FV2,FV3) adjust the Steam Generator (SG1,SG2,SG3)
+   levels so that the needles are in the White area.  You will need to turn off
+   the feed valves when the levels are correct.
+
+3. Turn off the Auxilliary Feed Pumps (AFP1,AFP2).  The pumps are turned off 
+   when the indicator light shows red.
+
+4. Reset the reactor (Rx).  The reactor is in operation when the indicator light
+   shows green.
+
+5. Move the rods out until the primary and secondary temperature and pressure
+   warning lights turn off.
+
+At this point the plant is in Hot-Standby, The only warning indicators should be
+Turbine Trip and possibly Steam-Feed Mismatch.
+
+Follow these steps to place you plant onto the power grid:
+
+1. Reset the turbine.  The turbine is in operation when the indicator light
+   shows green.
+
+2. Adjust the throttle until the RPM's are indicated in the white zone of the
+   meter.  The Sync light should also be lit.
+
+3. Press the Grid button to attach the plant to the power grid.  When the 
+   indicator light is green, the plant is on-line.
+
+You are now ready to start supplying your customers with power.  To do this 
+all you need to do is increase the Load control.  You should increase the
+load slowly, and make adjustments as needed as you start increasing your
+output power.  When you increase the load, you will need to increase the
+feed valves for the steam generators, and you will also need to move the
+control rods out.  Try to increase the plant to 100% output power, and keep all
+warning lights off. good luck!
+
+The controls:
+
+RCP 1	- Turns on/off Reactor Coolant Pump #1
+RCP 2	- Turns on/off Reactor Coolant Pump #2
+RCP 3	- Turns on/off Reactor Coolant Pump #3
+
+Out	- Move the control rods out (continuous)
+Out 1	- Move the control rods out one position
+In 1	- Move the control rods in one position
+In	- Move the control rods in (continuous)
+
+Rx	- Start or stop the Reactor
+SI	- Start safety injection.  This increases mass if there is a leak in
+	  the primary loop.  Keep an eye on the Pri-Mass % meter when using 
+          this control
+SI%	- This slider controls the amount of Safety Injection
+Pri PORV- Primary Relief Valve. This is used in order to release excess pressure
+	  in the primary loop.
+
+FV1	- Feed Valve 1.  This valve controls the water to Steam Generator 1
+FV2	- Feed Valve 2.  This valve controls the water to Steam Generator 2
+FV3	- Feed Valve 3.  This valve controls the water to Steam Generator 3
+
+FP 1	- Feed Pump 1. Feed pump for the Steam Generators
+FP 2	- Feed Pump 2. Feed pump for the Steam Generators
+AFP1	- Auxilliary Feed Pump 1
+AFP2	- Auxilliary Feed Pump 2
+Stm Dmp	- Steam Dump.  This is used in order to quickly release steam from the
+ 	  Steam Generators.  This is used generally when the Turbine trips.
+S.Dump	- This controls the amount of steam released when the Stm Dmp control
+	  is activated
+Sec PORV- Secondary Relief Valve. This is used in order to release excess pressure
+	  in the secondary loop.
+
+Turbine	- This starts or stops the Turbine
+Grid	- This attaches or removes the plant from the power grid
+Load	- This controls the amount of power your plant is outputting
+Voltage	- This controls the voltage output from your plant
+RPM	- This controls the RPMs of the Turbine.  RPMs must be adjusted so
+	  that the Sync light is lit.  If the plant is out of sync, the
+	  turbine will be tripped when you attempt to attach to the power grid
+
+
+Helpful tips:
+
+Before increasing output power, move the rods so that the temperature and 
+pressures appear near the top of the safe zone.  Also adjust the S/G levels
+to near the top of their safe zones.
+
+Before decreasing output power, move the rods so that the temperature and
+pressures appear near the bottom of the safe zone.  Also adjust the S/G levels
+to near the bottom of their safe zones.
+
+Keep a close eye on the S/G levels, this is where most of your problems 
+causing reactor trips will occur.
+
+
+Note: This program is not really finished.  The plant itself is 100% operational,
+but there is not much game to it, other than keeping it running.  Future
+enhancements include:
+	Scoring system
+	Random problems
+	Random loads
+	Multi-plant operation
